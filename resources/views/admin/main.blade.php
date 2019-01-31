@@ -10,24 +10,36 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+<<<<<<< HEAD
     <title>SB Admin - Blank Page</title>
 
+=======
+    <title>@yield('title') Tokap Admin</title>
+    <link rel="icon" type="image/png" href="{{url('favicon.png')}}">
+>>>>>>> tokap 3
     <!-- Bootstrap core CSS-->
     <link href="{{url('theme-sbadmin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Custom fonts for this template-->
     <link href="{{url('theme-sbadmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 
+<<<<<<< HEAD
     <!-- Page level plugin CSS-->
     <link href="{{url('theme-sbadmin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{url('theme-sbadmin/css/sb-admin.css')}}" rel="stylesheet">
 
+=======
+    <!-- Custom styles for this template-->
+    <link href="{{url('theme-sbadmin/css/sb-admin.css')}}" rel="stylesheet">
+    @stack('css')
+>>>>>>> tokap 3
   </head>
 
   <body id="page-top">
 
+<<<<<<< HEAD
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
       <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
@@ -88,10 +100,14 @@
       </ul>
 
     </nav>
+=======
+    @include('admin.navbar')
+>>>>>>> tokap 3
 
     <div id="wrapper">
 
       <!-- Sidebar -->
+<<<<<<< HEAD
       <ul class="sidebar navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">
@@ -126,11 +142,15 @@
             <span>Tables</span></a>
         </li>
       </ul>
+=======
+      @include ('admin.sidebar')
+>>>>>>> tokap 3
 
       <div id="content-wrapper">
 
         <div class="container-fluid">
 
+<<<<<<< HEAD
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -143,11 +163,17 @@
           <h1>Blank Page</h1>
           <hr>
           <p>This is a great starting point for new custom pages.</p>
+=======
+
+          <!-- Page Content -->
+          @yield('content')
+>>>>>>> tokap 3
 
         </div>
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
+<<<<<<< HEAD
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
@@ -155,6 +181,9 @@
             </div>
           </div>
         </footer>
+=======
+        @include ('admin.footer')
+>>>>>>> tokap 3
 
       </div>
       <!-- /.content-wrapper -->
@@ -167,6 +196,7 @@
       <i class="fas fa-angle-up"></i>
     </a>
 
+<<<<<<< HEAD
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -185,6 +215,10 @@
         </div>
       </div>
     </div>
+=======
+    <!-- Modal-->
+    @stack ('modal')
+>>>>>>> tokap 3
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{url('theme-sbadmin/vendor/jquery/jquery.min.js')}}"></script>
@@ -195,6 +229,12 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{url('theme-sbadmin/js/sb-admin.min.js')}}"></script>
+<<<<<<< HEAD
+=======
+    <script type="text/javascript" src="{{url('theme-sbadmin/js/navbar-nav.js')}}"></script>
+    @stack('js')
+
+>>>>>>> tokap 3
 
   </body>
 

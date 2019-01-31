@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function(){
 	Route::get('/', function(){
+<<<<<<< HEAD
 		return view('admin.main');
+=======
+		return view('admin.pages.dashboard');
+>>>>>>> tokap 3
 	})->name('admin.home'); 
 });
 
