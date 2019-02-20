@@ -16,7 +16,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<form method="POST" action="{{ route('admin.user.edit', ['id'=>$rc->id]) }}">
+		<form method="POST" action="{{ route('admin.user.edit',['id'=>$rc->id]) }}">
 			{{ csrf_field() }}
 			<div class="card">
 				<div class="card-header">
@@ -28,7 +28,7 @@
 					<div class="form-group form-label-group">
 						<input type="text" name="name"
 						class="form-control {{ $errors->has('name')? 'is-invalid':''}}"
-						value="{{ old('name') }}"
+						value="{{ old('name',$rc->name) }}"
 						id="iName" placeholder="Name" required>
 						<label for="iName">Name</label>
 						@if($errors->has('name'))
@@ -39,7 +39,7 @@
 					<div class="form-group form-label-group">
 						<input type="email" name="email"
 						class="form-control  {{ $errors->has('email')? 'is-invalid':''}}"
-						value="{{ old('email') }}"
+						value="{{ old('email',$rc->email) }}"
 						id="iEmail" placeholder="Email" required>
 						<label for="iEmail">Email</label>
 						@if($errors->has('email'))
@@ -52,17 +52,20 @@
 						<input type="password" name="password"
 						class="form-control  {{ $errors->has('password')? 'is-invalid':''}}"
 						value="{{ old('password') }}"
-						id="iPassword" placeholder="Password" required>
+						id="iPassword" placeholder="Password">
 						<label for="iPassword">Password</label>
 						@if($errors->has('password'))
 						<div class ="invalid-feedback"> {{ $errors->first('password') }}</div> 
 						@endif
+						<div class="form-text text-muted">
+							<small>Kosongkan Password apabila tidak diubah.</small>
+						</div>
 					</div><!-- End Form Group-->
 
 					<div class="form-group form-label-group">
 						<input type="password" name="repassword"
 						class="form-control  {{ $errors->has('repassword')? 'is-invalid':''}}"
-						id="iRePassword" placeholder="Re Password" required>
+						id="iRePassword" placeholder="Re Password">
 						<label for="iRePassword">Re Password</label>
 						@if($errors->has('repassword'))
 						<div class ="invalid-feedback"> {{ $errors->first('repassword') }}</div> 
@@ -71,7 +74,7 @@
 
 					<div class="form-group form-label-group">
 						<?php 
-						$val = old ('akses');
+						$val = old ('akses',$rc->akses);
  							?>
 						<select class="form-control  {{ $errors->has('akses')? 'is-invalid':''}} "
 						name="akses">
@@ -88,7 +91,7 @@
 				</div><!-- End Card Body-->
 
 				<div class="card-footer">
-					<button class="btn btn-primary" type="submit">Simpan</button>
+					<button class="btn btn-primary" type="submit">Update</button>
 				</div><!-- End Card Footer-->
 				
 			</div><!-- End Card-->
