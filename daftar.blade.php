@@ -12,6 +12,14 @@
 	</button>
 </div>
 @endif
+@if( session('result') == 'update')
+<div class="alert alert-success alert-dismissible fade show">
+	<strong> Updated!</strong> Berhasil diupdate.
+	<button type="button" class="close" data-dismiss="alert">
+		&times;
+	</button>
+</div>
+@endif
 
 <div class="row">
 <div class="col-md-6 mb-3">
